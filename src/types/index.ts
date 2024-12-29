@@ -22,3 +22,16 @@ export interface AuthState {
   resetPassword: (email: string) => Promise<void>;
   updateProfile: (data: Partial<User>) => Promise<void>;
 }
+
+export type Period = "1 min" | "5 mins" | "30 mins" | "1 day";
+
+export interface ChartData {
+  timestamp: string;
+  revenue: number;
+  profit: number;
+}
+
+export interface VisibleSeries {
+  revenue: boolean;
+  profit: boolean;
+}

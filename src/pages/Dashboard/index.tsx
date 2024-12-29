@@ -1,7 +1,8 @@
-import { Box, Grid } from '@mui/material';
-import StatsCards from './components/StatsCards';
-import UserActivityChart from './components/UserActivityChart';
-import RecentLogs from './components/RecentLogs';
+import { Box, Grid } from "@mui/material";
+import StatsCards from "./components/StatsCards";
+import UserActivityChart from "./components/UserActivityChart";
+import RecentLogs from "./components/RecentLogs";
+import { LineChartContainer } from "../../components/charts/LineChart";
 
 export default function Dashboard() {
   return (
@@ -15,6 +16,9 @@ export default function Dashboard() {
         </Grid>
         <Grid item xs={12} md={4}>
           <RecentLogs />
+        </Grid>
+        <Grid item xs={12}>
+          <LineChartContainer />
         </Grid>
       </Grid>
     </Box>
